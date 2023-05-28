@@ -19,19 +19,20 @@ function CarList() {
   };
 
   const renderedCars = cars.map((car) => {
+    // DECIDE IF THIS CAR SHOULD BE BOLD
     const bold = name && car.name.toLowerCase().includes(name.toLowerCase());
 
     return (
       <div key={car.id} className={`panel ${bold && "bold"}`}>
         <p>
           {car.name} - ${car.cost}
-          <button
-            className="button is-danger"
-            onClick={() => handleCarDelete(car)}
-          >
-            Delete
-          </button>
         </p>
+        <button
+          className="button is-danger"
+          onClick={() => handleCarDelete(car)}
+        >
+          Delete
+        </button>
       </div>
     );
   });

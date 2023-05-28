@@ -9,6 +9,7 @@ function CarForm() {
       cost: state.form.cost,
     };
   });
+
   const handleNameChange = (event) => {
     dispatch(changeName(event.target.value));
   };
